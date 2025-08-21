@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LibraryApp.Pages.BooksPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Books">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+        <Label Text="Books" FontSize="20" />
+
+        <CollectionView x:Name="BooksList" HeightRequest="250" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="{Binding Title}" />
+                        <Label Grid.Column="1" Text="{Binding Status}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Entry x:Name="TitleEntry" Placeholder="Title" />
+        <Entry x:Name="AuthorEntry" Placeholder="Author" />
+        <Entry x:Name="IsbnEntry" Placeholder="ISBN" />
+
+        <HorizontalStackLayout Spacing="8">
+            <Button Text="Add" Clicked="OnAddBook" />
+            <Button Text="Update Selected" Clicked="OnUpdateBook" />
+            <Button Text="Delete Selected" Clicked="OnDeleteBook" />
+        </HorizontalStackLayout>
+
+        <Label x:Name="Message" TextColor="Red" IsVisible="False" />
+    </VerticalStackLayout>
+</ContentPage>

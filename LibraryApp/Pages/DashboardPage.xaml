@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LibraryApp.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Dashboard">
+
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="Dashboard" FontSize="22" />
+        <Button Text="Manage Books" Clicked="GotoBooks" />
+        <Button Text="Manage Members" Clicked="GotoMembers" />
+        <Button Text="Loan Transactions" Clicked="GotoLoans" />
+    </VerticalStackLayout>
+</ContentPage>

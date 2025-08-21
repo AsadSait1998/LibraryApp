@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LibraryApp.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="Library Management System" FontSize="24" HorizontalOptions="Center" />
+        <Entry x:Name="Username" Placeholder="Username" />
+        <Entry x:Name="Password" Placeholder="Password" IsPassword="True" />
+        <Button Text="Login" Clicked="OnLoginClicked" />
+        <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False" />
+    </VerticalStackLayout>
+</ContentPage>

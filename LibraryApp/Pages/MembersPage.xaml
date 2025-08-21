@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LibraryApp.Pages.MembersPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Members">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+        <Label Text="Members" FontSize="20" />
+
+        <CollectionView x:Name="MembersList" HeightRequest="250" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding Email}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Entry x:Name="NameEntry" Placeholder="Name" />
+        <Entry x:Name="EmailEntry" Placeholder="Email" />
+
+        <HorizontalStackLayout Spacing="8">
+            <Button Text="Add" Clicked="OnAddMember" />
+            <Button Text="Update Selected" Clicked="OnUpdateMember" />
+            <Button Text="Delete Selected" Clicked="OnDeleteMember" />
+        </HorizontalStackLayout>
+
+        <Label x:Name="Message" TextColor="Red" IsVisible="False" />
+    </VerticalStackLayout>
+</ContentPage>
