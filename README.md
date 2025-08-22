@@ -3,6 +3,8 @@
 
 A desktop Library Management System built with .NET MAUI and SQLite. It supports managing Books and Members and performing Loan transactions (borrow/return) with validation and exception handling.
 
+## IMPORTANT: The login for the app is admin admin
+
 ## 🎯 Purpose
 Provide librarians a simple, reliable GUI to:
 - Add/update/delete **Books** and **Members**
@@ -34,4 +36,5 @@ Provide librarians a simple, reliable GUI to:
 ## Highlights
 - `Person` **abstract** base; `Member`, `Librarian` derive.
 - `IBorrowable` **interface** implemented by `Book`.
+
 - Separation of concerns via `DatabaseService`.
