@@ -1,6 +1,8 @@
 # Made by Asad Arif and Talha Arif 
 # Library Management System (MAUI + SQLite)
 
+# Link to Demo!! https://youtu.be/lNIihGkF0UE
+
 A desktop Library Management System built with .NET MAUI and SQLite. It supports managing Books and Members and performing Loan transactions (borrow/return) with validation and exception handling.
 
 ## IMPORTANT: The login for the app is admin admin
@@ -38,3 +40,4 @@ Provide librarians a simple, reliable GUI to:
 - `IBorrowable` **interface** implemented by `Book`.
 
 - Separation of concerns via `DatabaseService`.
+
